@@ -1,6 +1,5 @@
 
-import oneJs from './modules/one';
-import twoJs from './modules/two';
+import timer from './modules/timer';
 
-oneJs();
-twoJs();
+
+timer('31 june 2022');
