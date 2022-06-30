@@ -1,4 +1,4 @@
-import animate from './animate'
+import animate from './animate';
 
 const modal = () => {
     const buttons = document.querySelectorAll('.popup-btn');
@@ -9,9 +9,9 @@ const modal = () => {
     const animateModal = () => {
         if (screen.width > 768) {
             animate({
-                duration: 700,
+                duration: 800,
                 timing(timeFraction) {
-                    return 1;
+                    return(timeFraction);
                 },
                 draw(progress) {
                     modal.style.opacity = progress;
@@ -19,7 +19,7 @@ const modal = () => {
                 } 
             });
         } else {
-            modal.style.display = 'block';
+            modal.style.display = 'block' ;
         }
     }
    
@@ -43,4 +43,4 @@ const modal = () => {
 
 }
 
-export default modal
+export default modal;
