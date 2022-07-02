@@ -60,7 +60,7 @@ const timer = (deadline) => {
         
     };
     const idInterval = setInterval(() => {
-        updateClock();
+updateClock();
     }, 1000);
 
     console.log(setInterval)
