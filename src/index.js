@@ -7,11 +7,15 @@ import form from './modules/form';
 
 
 
+
+
+
 timer('31 july 2022');
 menu();
 modal();
 inputCalc();
 form();
+
 
 
 
