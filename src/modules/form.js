@@ -5,12 +5,12 @@ const inputMessange = document.querySelector('input[placeholder="Ваше соо
 const inputEmail = document.querySelectorAll('input[type="email"]');
 const inputTel = document.querySelectorAll('input[type="tel"]');
 
-//     inputAll.forEach(element => {
-//         element.addEventListener('input', () => {
-//         element.value = element.value.replace(/[^а-я-\s]/gi,'');
+    inputAll.forEach(element => {
+        element.addEventListener('input', () => {
+        element.value = element.value.replace(/[^а-я-\s]/gi,'');
         
-//     })
-// })
+    })
+})
 
 
     inputMessange.addEventListener('input', () => {

@@ -1,6 +1,6 @@
 
 const inputCalc = () => {
-    const calcBlock = document.querySelector('.calc-block')
+  const calcBlock = document.querySelector('.calc-block')
 
   calcBlock.addEventListener('input', (e) =>{
     if (e.target.localName == 'input') {
@@ -10,4 +10,7 @@ const inputCalc = () => {
 
 }
 
+
+
 export default inputCalc
+
