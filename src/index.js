@@ -5,6 +5,7 @@ import modal from './modules/modal';
 import inputCalc from './modules/inputcalc';
 import form from './modules/form';
 import tabs from './modules/tabs';
+import slider from './modules/slider';
 
 
 
@@ -17,6 +18,7 @@ modal();
 inputCalc();
 form();
 tabs();
+slider();
 
 
 
