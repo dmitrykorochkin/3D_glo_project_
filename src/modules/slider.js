@@ -2,11 +2,29 @@ const slider = () => {
 
     const sliderBlock = document.querySelector('.portfolio-content');
     const slides = document.querySelectorAll('.portfolio-item');
-    const dots = document.querySelectorAll('.dot');
     const timeInterval = 2000;
+    const dotPortfolio = document.querySelector('.portfolio-dots');
 
-    let currentSlide = 0 
-    let interval
+    let dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let interval;
+
+
+    const dotElements = () => {
+        for (let i = 0; i < slides.length; i++) {
+            let element = document.createElement('li')
+
+            if(i == 0) {
+                element.classList = 'dot dot-active';
+            } else {
+                element.classList = 'dot';
+            }
+            dotPortfolio.append(element);
+
+        }   
+        dots = document.querySelectorAll('.dot')
+    }
+    dotElements()
     
     const prevSlide = (elems, index, strClass) => {
         elems[index].classList.remove(strClass);
