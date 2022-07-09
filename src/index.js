@@ -6,6 +6,7 @@ import inputCalc from './modules/inputcalc';
 import form from './modules/form';
 import tabs from './modules/tabs';
 import slider from './modules/slider';
+import calc from './modules/calc';
 
 
 
@@ -19,6 +20,7 @@ inputCalc();
 form();
 tabs();
 slider();
+calc(100)
 
 
 
