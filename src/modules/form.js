@@ -26,7 +26,7 @@ const form = () => {
   
       inputTel.forEach(element => {
           element.addEventListener('input',() =>{
-            element.value = element.value.replace(/[^\d\-()']+/gi, "")
+            element.value = element.value.replace(/[^\d\-()+']+/gi, "")
           })
         });
   })
