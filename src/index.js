@@ -7,6 +7,7 @@ import form from './modules/form';
 import tabs from './modules/tabs';
 import slider from './modules/slider';
 import calc from './modules/calc';
+import sendForm from './modules/sendForm';
 
 
 
@@ -21,7 +22,31 @@ form();
 tabs();
 slider();
 calc(100)
+sendForm({idForm:'form1', 
+          somElem: [
+        {
+            type: 'block',
+            id: 'total'
+        }
+    ]
+});
 
+sendForm({idForm:'form2',
+        somElem: [
+        {
+            type: 'block',
+            id: 'total'
+        }
+    ]
+})
+sendForm({idForm:'form3',
+        somElem: [
+        {
+            type: 'block',
+            id: 'total'
+        }
+    ]
+})
 
 
 
