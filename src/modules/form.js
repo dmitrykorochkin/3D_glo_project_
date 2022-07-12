@@ -14,7 +14,7 @@ const form = () => {
   
   
       inputMessange.addEventListener('input', () => {
-          inputMessange.value = inputMessange.value.replace(/[^а-я-\s]/gi,'');
+          inputMessange.value = inputMessange.value.replace(/[^а-я-\s\.,!?:;\"\-]/gi,'');
           
       })
   
