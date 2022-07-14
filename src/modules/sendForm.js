@@ -1,3 +1,5 @@
+import maskPhone from './maskphone';
+
 const sendForm = ({idForm, somElem = []}) => {
 
     const form = document.getElementById(idForm);

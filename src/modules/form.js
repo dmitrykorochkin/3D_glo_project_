@@ -1,3 +1,5 @@
+import maskPhone from './maskphone';
+
 const form = () => {
 
   const inputName = document.querySelectorAll('input[name = user_name]');
