@@ -8,6 +8,26 @@ const sendForm = ({idForm, somElem = []}) => {
 
     const validate = (list) => {
         let success = true;
+        
+
+        list.forEach(input => {
+            if (!input.value) {
+                success = false;
+            }
+            if (input.name === "user_phone" && (!(/^[\+]?\(?([0-9]{4})\)?([-]?)([0-9]{3})\2([0-9]{4})+$/g.test(input.value)) || input.value === "")){
+                alert("Введите корректный номер телефона, пример: +79374564612 ");
+                success = false;
+              }
+        
+              if(input.name === "user_name" && (/[^а-яА-Я ]/g.test(input.value) || input.value === "" ||input.value.length < 2)){
+                alert("Введите имя на кириллице(не менее 2 букв)");
+                success = false;
+              }
+        
+              if(input.name === "user_message" && /[^а-яА-Я0-9 -.,;:!?"()]/g.test(input.value)){
+                success = false;
+              }
+        })
         return success;
     }
 
