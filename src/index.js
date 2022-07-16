@@ -9,6 +9,7 @@ import slider from './modules/slider';
 import calc from './modules/calc';
 import sendForm from './modules/sendForm';
 import maskPhone from './modules/maskphone';
+import validInput from './modules/validation';
 
 
 
@@ -24,6 +25,7 @@ tabs();
 slider();
 calc(100);
 maskPhone();
+validInput();
 sendForm({idForm:'form1', 
           somElem: [
         {

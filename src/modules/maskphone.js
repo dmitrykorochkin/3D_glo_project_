@@ -1,6 +1,6 @@
 
 
-function maskPhone(selector, masked = '+7 (__)___-__-__') { 
+function maskPhone(selector, masked = '+7 (__) --') { 
     
     const elems = document.querySelectorAll(selector);
 
@@ -41,4 +41,4 @@ function maskPhone(selector, masked = '+7 (__)___-__-__') {
     
     // use
     
-    export default maskPhone
+    export default maskPhone;
