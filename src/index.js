@@ -16,6 +16,8 @@ import validInput from './modules/validation';
 
 
 
+
+
 timer('31 july 2022');
 menu();
 modal();
@@ -26,11 +28,13 @@ slider();
 calc(100);
 maskPhone();
 validInput();
+
 sendForm({idForm:'form1', 
           somElem: [
         {
             type: 'block',
             id: 'total'
+            
         }
     ]
 });
@@ -47,7 +51,7 @@ sendForm({idForm:'form3',
         somElem: [
         {
             type: 'block',
-            id: 'total'
+            
         }
     ]
 })

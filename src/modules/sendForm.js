@@ -79,6 +79,12 @@ const sendForm = ({idForm, somElem = []}) => {
         console.log(error.message);
     }
 
+    
+        
+    
+    
 }
 
 export default sendForm;
+
+
