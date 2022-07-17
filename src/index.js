@@ -18,6 +18,7 @@ import validInput from './modules/validation';
 
 
 
+
 timer('31 july 2022');
 menu();
 modal();
