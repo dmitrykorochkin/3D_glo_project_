@@ -1,4 +1,4 @@
-const maskPhone = function(selector, masked = '+7 (___) ___-__-__') {
+const maskPhone = function(selector, masked = '+7(___)___-__-__') {
 	const elems = document.querySelectorAll(selector);
 
 	const mask = function(event) {

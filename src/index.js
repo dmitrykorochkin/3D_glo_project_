@@ -10,6 +10,7 @@ import calc from './modules/calc';
 import sendForm from './modules/sendForm';
 import maskPhone from './modules/maskphone';
 import validInput from './modules/validation';
+import inputValidate from './modules/inputValidate';
 
 
 
@@ -29,7 +30,7 @@ slider();
 calc(100);
 maskPhone();
 validInput();
-
+inputValidate();
 sendForm({idForm:'form1', 
           somElem: [
         {
@@ -52,6 +53,7 @@ sendForm({idForm:'form3',
         somElem: [
         {
             type: 'block',
+            id: 'total'
             
         }
     ]
