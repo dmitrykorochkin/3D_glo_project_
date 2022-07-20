@@ -34,6 +34,9 @@ const validInput = () => {
 
   inputMessage.addEventListener("input", (e) => {
     e.target.value = e.target.value.replace(/[^а-яА-ЯёЁ\s.,;:'"!?\d]+/i, "");
+    if(inputMessage === '') {
+        e.preventDefault()
+    }
    
   });
 

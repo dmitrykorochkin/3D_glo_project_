@@ -8,9 +8,8 @@ import tabs from './modules/tabs';
 import slider from './modules/slider';
 import calc from './modules/calc';
 import sendForm from './modules/sendForm';
-import maskPhone from './modules/maskphone';
 import validInput from './modules/validation';
-import inputValidate from './modules/inputValidate';
+
 
 
 
@@ -28,9 +27,7 @@ form();
 tabs();
 slider();
 calc(100);
-maskPhone();
 validInput();
-inputValidate();
 sendForm({idForm:'form1', 
           somElem: [
         {

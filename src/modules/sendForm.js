@@ -14,10 +14,10 @@ const sendForm = ({ idForm, somElem = [] }) => {
 
   statusBlock.style.color = "#fff";
 
-  const inputValidate = (list) => {
-    let success = true;
-    return success;
-  };
+  // const validInput = (list) => {
+  //   let success = true;
+  //   return success;
+  // };
 
   const sendData = (data) => {
     return fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -37,16 +37,25 @@ const sendForm = ({ idForm, somElem = [] }) => {
     statusBlock.textContent = loadText;
     form.append(statusBlock);
 
+   
+
     formData.forEach((val, key) => {
       formBody[key] = val;
-     
-    });
+
+      // if (val === '') {
+        
+      // }
+});
+
+
+    
 
     somElem.forEach((elem) => {
       const element = document.getElementById(elem.id);
       console.log(elem)
       if (elem.type === "block" && +element.textContent) {
-        formBody[elem.id] = element.textContent;
+        
+        
       } else if (elem.type === "input" && element.value) {
         formBody[elem.id] = element.value;
       }
@@ -54,11 +63,13 @@ const sendForm = ({ idForm, somElem = [] }) => {
 
     if (inputValidate(formElements)) {
       sendData(formBody)
+      
         .then((data) => {
           statusBlock.textContent = successText;
 
           formElements.forEach((input) => {
             input.value = "";
+            
           });
           setInterval(() => {
             statusBlock.textContent = "";
@@ -78,9 +89,6 @@ const sendForm = ({ idForm, somElem = [] }) => {
       }, 2000);
     }
   };
-
-
-
   try {
     if (!form) {
       throw new Error("Верните форму на место!");
