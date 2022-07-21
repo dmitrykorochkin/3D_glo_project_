@@ -17,8 +17,6 @@ const inputValidate = fields => {
             field.classList.add('error');
         }
 
-        
-       
     });
 
     return isValid;

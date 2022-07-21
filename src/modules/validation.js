@@ -10,7 +10,7 @@ const validInput = () => {
 
   inputUserName.forEach((item) => {
 
-    maskPhone("input[type=tel]")
+    maskPhone("input[type=tel]");
     
 
     if (item.classList.contains("calc-item")) {
@@ -34,9 +34,6 @@ const validInput = () => {
 
   inputMessage.addEventListener("input", (e) => {
     e.target.value = e.target.value.replace(/[^а-яА-ЯёЁ\s.,;:'"!?\d]+/i, "");
-    if(inputMessage === '') {
-        e.preventDefault()
-    }
    
   });
 

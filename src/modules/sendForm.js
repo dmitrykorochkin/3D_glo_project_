@@ -1,5 +1,3 @@
-
-
 "use strict";
 
 import inputValidate from './inputValidate';
@@ -13,11 +11,6 @@ const sendForm = ({ idForm, somElem = [] }) => {
   const textError = "Попробуйте ещё раз...";
 
   statusBlock.style.color = "#fff";
-
-  // const validInput = (list) => {
-  //   let success = true;
-  //   return success;
-  // };
 
   const sendData = (data) => {
     return fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -37,25 +30,16 @@ const sendForm = ({ idForm, somElem = [] }) => {
     statusBlock.textContent = loadText;
     form.append(statusBlock);
 
-   
-
-    formData.forEach((val, key) => {
-      formBody[key] = val;
-
-      // if (val === '') {
-        
-      // }
-});
-
-
     
+    formData.forEach((val, key) => {
+      val && (formBody[key] = val);
+  });
+
+      
 
     somElem.forEach((elem) => {
       const element = document.getElementById(elem.id);
-      console.log(elem)
-      if (elem.type === "block" && +element.textContent) {
-        
-        
+      if (elem.type === "block" && element.textContent) {
       } else if (elem.type === "input" && element.value) {
         formBody[elem.id] = element.value;
       }
@@ -79,7 +63,6 @@ const sendForm = ({ idForm, somElem = [] }) => {
           statusBlock.textContent = errorText;
         });
     } else {
-      // alert("Данные не валидны!");
 
       form.append(statusBlock);
       statusBlock.textContent = textError;

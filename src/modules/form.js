@@ -1,5 +1,3 @@
-
-
 const form = () => {
 
   const inputName = document.querySelectorAll('input[name = user_name]');
@@ -11,29 +9,24 @@ const form = () => {
           element.addEventListener('input', () => {
           element.value = element.value.replace(/[^а-я-\s]/gi,'');
           
-      })
-  })
-  
+      });
+  });
   
       inputMessange.addEventListener('input', () => {
-          inputMessange.value = inputMessange.value.replace(/[^а-я-\s\.,!?:;\"\-]/gi,'');
-          
-      })
+          inputMessange.value = inputMessange.value.replace(/[^а-я-\s\.,!?:;\"\-]/gi,'');      
+      });
   
       inputEmail.forEach(element => {
           element.addEventListener('input', () => {
-          element.value = element.value.replace(/[^\d\w\-\@\_\.\!\~\*\']+/gi, '');
-          
-      })
+          element.value = element.value.replace(/[^\d\w\-\@\_\.\!\~\*\']+/gi, '');  
+      });
   
       inputTel.forEach(element => {
           element.addEventListener('input',() =>{
-            element.value = element.value.replace(/[^\d\-()+']+/gi, "")
-          })
+            element.value = element.value.replace(/[^\d\-()+']+/gi, "");
+          });
         });
-  })
-  
-  
-  }
+  });
+  };
   
   export default form;
