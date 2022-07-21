@@ -10,8 +10,6 @@ const validInput = () => {
 
   inputUserName.forEach((item) => {
 
-    maskPhone("input[type=tel]");
-    
 
     if (item.classList.contains("calc-item")) {
       item.addEventListener("input", (e) => {
@@ -51,6 +49,9 @@ const validInput = () => {
   });
 
   inputTel.forEach((item) => {
+
+    maskPhone("input[type=tel]");
+
     item.addEventListener("input", (e) => {
       e.target.value = e.target.value.replace(/[^\d+()-]+/gi, "");
       if(e.target.classList.contains('error') && inputValidate([e.target])) {
@@ -66,5 +67,5 @@ const validInput = () => {
 
     
    
-  }
+}
 export default validInput;
