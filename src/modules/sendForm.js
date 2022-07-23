@@ -19,7 +19,7 @@ const sendForm = ({ idForm, somElem = [] }) => {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((res) => res.json());
+    }).then(res => res.json());
   };
 
   const submitForm = () => {
@@ -36,14 +36,15 @@ const sendForm = ({ idForm, somElem = [] }) => {
   });
 
       
+    somElem.forEach(elem => {
+      const element = document.getElementById(elem.id)
 
-    somElem.forEach((elem) => {
-      const element = document.getElementById(elem.id);
-      if (elem.type === "block" && element.textContent) {
-      } else if (elem.type === "input" && element.value) {
-        formBody[elem.id] = element.value;
+      if (elem.type === 'block') {
+          formBody[elem.id] = element.textContent
+      } else if (elem.type === 'input') {
+          formBody[elem.id] = element.value
       }
-    });
+  })
 
     if (inputValidate(formElements)) {
       sendData(formBody)
