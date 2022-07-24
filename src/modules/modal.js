@@ -1,4 +1,5 @@
-import animate from './animate';
+import animate from './helpers';
+import sendForm from './sendForm';
 
 const modal = () => {
     const buttons = document.querySelectorAll('.popup-btn');
@@ -22,10 +23,6 @@ const modal = () => {
             modal.style.display = 'block' ;
         }
     }
-   
-    
-
-    
 
     buttons.forEach(btn => { 
         btn.addEventListener('click', () => {
@@ -33,10 +30,12 @@ const modal = () => {
     
         })
     })
-    popupClose.addEventListener('click', () => {
-        modal.style.display = 'none';
 
-        
+
+    modal.addEventListener('click', (e)=> {
+        if (!e.target.closest('.popup-content') || e.target.classList.contains('popup-close')) {
+            modal.style.display = 'none';
+        }
     })
 
     
