@@ -36,14 +36,25 @@ const sendForm = ({ idForm, somElem = [] }) => {
   });
 
       
-    somElem.forEach(elem => {
-      const element = document.getElementById(elem.id)
+  //   somElem.forEach(elem => {
+  //     const element = document.getElementById(elem.id)
 
+  //     if (elem.type === 'block') {
+  //         formBody[elem.id] = element.textContent
+  //     } else if (elem.type === 'input') {
+  //         formBody[elem.id] = element.value
+  //     }
+  // })
+  somElem.forEach(elem =>{
+    const element = document.getElementById(elem.id)
+    if (element && parseInt(element.textContent) > 0) {
       if (elem.type === 'block') {
-          formBody[elem.id] = element.textContent
+        formBody[elem.id] = element.textContent
       } else if (elem.type === 'input') {
-          formBody[elem.id] = element.value
+        formBody[elem.id] = element.value
       }
+    }
+
   })
 
     if (inputValidate(formElements)) {
